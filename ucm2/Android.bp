@@ -975,8 +975,6 @@ phony {
     ],
 }
 
-// conf.d/simple-card/Librem 5 Devkit.conf -> ../../NXP/iMX8/Librem_5_Devkit/Librem 5 Devkit.conf
-// conf.d/simple-card/Librem 5.conf -> ../../NXP/iMX8/Librem_5/Librem 5.conf
 // conf.d/simple-card/PinePhone.conf -> ../../Allwinner/A64/PinePhone/PinePhone.conf
 // conf.d/simple-card/apalis-imx8qm.conf -> ../../NXP/iMX8/Toradex/apalis-imx8/apalis-imx8.conf
 // conf.d/simple-card/apalis-nau8822.conf -> ../../IO-Boards/Toradex/apalis/eval.conf
@@ -989,6 +987,10 @@ phony {
 // conf.d/simple-card/tdx-smarc-wm8904.conf -> ../../IO-Boards/Toradex/smarc/dev.conf
 // conf.d/simple-card/verdin-nau8822.conf -> ../../IO-Boards/Toradex/verdin/dev.conf
 // conf.d/simple-card/verdin-wm8904.conf -> ../../IO-Boards/Toradex/verdin/dahlia.conf
+//
+// NOT installed, path contains whitespace (see ucm2/conf.d/Android.bp):
+//   conf.d/simple-card/Librem 5 Devkit.conf
+//   conf.d/simple-card/Librem 5.conf
 phony {
     name: "alsa-ucm-conf-card-simple-card",
     required: [
@@ -1000,13 +1002,9 @@ phony {
         "alsa-ucm-conf-files-IO-Boards_Toradex_verdin",
         "alsa-ucm-conf-files-NXP_iMX7_Toradex_colibri-imx7",
         "alsa-ucm-conf-files-NXP_iMX8X_Toradex_colibri-imx8x",
-        "alsa-ucm-conf-files-NXP_iMX8_Librem_5",
-        "alsa-ucm-conf-files-NXP_iMX8_Librem_5_Devkit",
         "alsa-ucm-conf-files-NXP_iMX8_Toradex_apalis-imx8",
         "alsa-ucm-conf-files-Rockchip_es8316",
         "alsa-ucm-conf-files-Rockchip_rk817-sound",
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5",
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5_Devkit",
         "alsa-ucm-conf-link-conf.d_simple-card_PinePhone",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-imx8qm",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-nau8822",
@@ -1316,45 +1314,29 @@ phony {
     ],
 }
 
-// conf.d/tegra/ASUS Google Nexus 7 ALC5642.conf -> ../../Tegra/rt5640/Google-Nexus-7.conf
-// conf.d/tegra/Acer Iconia Tab A500 WM8903.conf -> ../../Tegra/wm8903/Acer-A500.conf
-// conf.d/tegra/Asus EeePad Slider WM8903.conf -> ../../Tegra/wm8903/Asus-Transformer.conf
-// conf.d/tegra/Asus EeePad Transformer WM8903.conf -> ../../Tegra/wm8903/Asus-Transformer.conf
-// conf.d/tegra/Asus Transformer Infinity TF700T RT5631.conf -> ../../Tegra/rt5631/Asus-Transformer.conf
-// conf.d/tegra/Asus Transformer Pad TF300T WM8903.conf -> ../../Tegra/wm8903/Asus-Transformer.conf
-// conf.d/tegra/Asus Transformer Pad TF300TG RT5631.conf -> ../../Tegra/rt5631/Asus-Transformer.conf
-// conf.d/tegra/Asus Transformer Pad TF300TL RT5631.conf -> ../../Tegra/rt5631/Asus-Transformer.conf
-// conf.d/tegra/Asus Transformer Prime TF201 RT5631.conf -> ../../Tegra/rt5631/Asus-Transformer.conf
-// conf.d/tegra/Compal PAZ00.conf -> ../../Tegra/alc5632/alc5632.conf
 // conf.d/tegra/GoogleNyanBig.conf -> ../../Tegra/max98090/max98090.conf
 // conf.d/tegra/GoogleNyanBlaze.conf -> ../../Tegra/max98090/max98090.conf
-// conf.d/tegra/LG Optimus 4X HD MAX98089.conf -> ../../Tegra/max98089/lge-x3.conf
-// conf.d/tegra/LG Optimus Vu MAX98089.conf -> ../../Tegra/max98089/lge-x3.conf
+//
+// NOT installed, path contains whitespace (see ucm2/conf.d/Android.bp):
+//   conf.d/tegra/ASUS Google Nexus 7 ALC5642.conf
+//   conf.d/tegra/Acer Iconia Tab A500 WM8903.conf
+//   conf.d/tegra/Asus EeePad Slider WM8903.conf
+//   conf.d/tegra/Asus EeePad Transformer WM8903.conf
+//   conf.d/tegra/Asus Transformer Infinity TF700T RT5631.conf
+//   conf.d/tegra/Asus Transformer Pad TF300T WM8903.conf
+//   conf.d/tegra/Asus Transformer Pad TF300TG RT5631.conf
+//   conf.d/tegra/Asus Transformer Pad TF300TL RT5631.conf
+//   conf.d/tegra/Asus Transformer Prime TF201 RT5631.conf
+//   conf.d/tegra/Compal PAZ00.conf
+//   conf.d/tegra/LG Optimus 4X HD MAX98089.conf
+//   conf.d/tegra/LG Optimus Vu MAX98089.conf
 phony {
     name: "alsa-ucm-conf-card-tegra",
     required: [
         "alsa-ucm-conf-base",
-        "alsa-ucm-conf-files-Tegra_alc5632",
-        "alsa-ucm-conf-files-Tegra_max98089",
         "alsa-ucm-conf-files-Tegra_max98090",
-        "alsa-ucm-conf-files-Tegra_rt5631",
-        "alsa-ucm-conf-files-Tegra_rt5640",
-        "alsa-ucm-conf-files-Tegra_wm8903",
-        "alsa-ucm-conf-files-codecs_rt5640",
-        "alsa-ucm-conf-link-conf.d_tegra_ASUS_Google_Nexus_7_ALC5642",
-        "alsa-ucm-conf-link-conf.d_tegra_Acer_Iconia_Tab_A500_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Slider_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Transformer_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Infinity_TF700T_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TG_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TL_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300T_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Prime_TF201_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Compal_PAZ00",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBig",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBlaze",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_4X_HD_MAX98089",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_Vu_MAX98089",
     ],
 }
 

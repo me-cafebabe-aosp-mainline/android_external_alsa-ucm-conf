@@ -31,6 +31,11 @@
 //   PRODUCT_PACKAGES += alsa-ucm-conf-all
 //
 // `android/gen_android_bp.py --list` prints every selectable module name.
+//
+// Known limitation: upstream names a few configurations after the card long
+// name, which contains spaces (e.g. conf.d/tegra/Compal PAZ00.conf). Kati/Make
+// cannot install paths with whitespace, so those are skipped. Each affected
+// Android.bp lists them in a comment near the top.
 
 package {
     default_applicable_licenses: [

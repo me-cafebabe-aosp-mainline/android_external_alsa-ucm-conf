@@ -10,6 +10,30 @@ package {
     ],
 }
 
+// NOT installable by the Android build (ucm2/conf.d):
+//
+// Kati/Make treats whitespace as a list separator, so a path that
+// contains a space cannot be installed, whatever the module type.
+// alsa-lib probes for these by ${CardLongName}; a device that needs
+// one of them has to provide it by other means, e.g. a device
+// specific conf.d/<driver>/<driver>.conf that dispatches on the
+// card long name.
+//
+//   ucm2/conf.d/simple-card/Librem 5 Devkit.conf
+//   ucm2/conf.d/simple-card/Librem 5.conf
+//   ucm2/conf.d/tegra/ASUS Google Nexus 7 ALC5642.conf
+//   ucm2/conf.d/tegra/Acer Iconia Tab A500 WM8903.conf
+//   ucm2/conf.d/tegra/Asus EeePad Slider WM8903.conf
+//   ucm2/conf.d/tegra/Asus EeePad Transformer WM8903.conf
+//   ucm2/conf.d/tegra/Asus Transformer Infinity TF700T RT5631.conf
+//   ucm2/conf.d/tegra/Asus Transformer Pad TF300T WM8903.conf
+//   ucm2/conf.d/tegra/Asus Transformer Pad TF300TG RT5631.conf
+//   ucm2/conf.d/tegra/Asus Transformer Pad TF300TL RT5631.conf
+//   ucm2/conf.d/tegra/Asus Transformer Prime TF201 RT5631.conf
+//   ucm2/conf.d/tegra/Compal PAZ00.conf
+//   ucm2/conf.d/tegra/LG Optimus 4X HD MAX98089.conf
+//   ucm2/conf.d/tegra/LG Optimus Vu MAX98089.conf
+
 install_symlink {
     name: "alsa-ucm-conf-link-conf.d_DB410c_DB410c",
     vendor: true,
@@ -641,20 +665,6 @@ install_symlink {
 }
 
 install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_simple-card_Librem_5_Devkit",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/simple-card/Librem 5 Devkit.conf",
-    symlink_target: "../../NXP/iMX8/Librem_5_Devkit/Librem 5 Devkit.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_simple-card_Librem_5",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/simple-card/Librem 5.conf",
-    symlink_target: "../../NXP/iMX8/Librem_5/Librem 5.conf",
-}
-
-install_symlink {
     name: "alsa-ucm-conf-link-conf.d_simple-card_PinePhone",
     vendor: true,
     installed_location: "etc/alsa/ucm2/conf.d/simple-card/PinePhone.conf",
@@ -886,76 +896,6 @@ install_symlink {
 }
 
 install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_ASUS_Google_Nexus_7_ALC5642",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/ASUS Google Nexus 7 ALC5642.conf",
-    symlink_target: "../../Tegra/rt5640/Google-Nexus-7.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Acer_Iconia_Tab_A500_WM8903",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Acer Iconia Tab A500 WM8903.conf",
-    symlink_target: "../../Tegra/wm8903/Acer-A500.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Slider_WM8903",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus EeePad Slider WM8903.conf",
-    symlink_target: "../../Tegra/wm8903/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Transformer_WM8903",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus EeePad Transformer WM8903.conf",
-    symlink_target: "../../Tegra/wm8903/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Infinity_TF700T_RT5631",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus Transformer Infinity TF700T RT5631.conf",
-    symlink_target: "../../Tegra/rt5631/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300T_WM8903",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus Transformer Pad TF300T WM8903.conf",
-    symlink_target: "../../Tegra/wm8903/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TG_RT5631",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus Transformer Pad TF300TG RT5631.conf",
-    symlink_target: "../../Tegra/rt5631/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TL_RT5631",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus Transformer Pad TF300TL RT5631.conf",
-    symlink_target: "../../Tegra/rt5631/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Prime_TF201_RT5631",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Asus Transformer Prime TF201 RT5631.conf",
-    symlink_target: "../../Tegra/rt5631/Asus-Transformer.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_Compal_PAZ00",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/Compal PAZ00.conf",
-    symlink_target: "../../Tegra/alc5632/alc5632.conf",
-}
-
-install_symlink {
     name: "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBig",
     vendor: true,
     installed_location: "etc/alsa/ucm2/conf.d/tegra/GoogleNyanBig.conf",
@@ -967,20 +907,6 @@ install_symlink {
     vendor: true,
     installed_location: "etc/alsa/ucm2/conf.d/tegra/GoogleNyanBlaze.conf",
     symlink_target: "../../Tegra/max98090/max98090.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_4X_HD_MAX98089",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/LG Optimus 4X HD MAX98089.conf",
-    symlink_target: "../../Tegra/max98089/lge-x3.conf",
-}
-
-install_symlink {
-    name: "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_Vu_MAX98089",
-    vendor: true,
-    installed_location: "etc/alsa/ucm2/conf.d/tegra/LG Optimus Vu MAX98089.conf",
-    symlink_target: "../../Tegra/max98089/lge-x3.conf",
 }
 
 install_symlink {
@@ -1113,8 +1039,6 @@ phony {
         "alsa-ucm-conf-link-conf.d_sc8280xp_sc8280xp",
         "alsa-ucm-conf-link-conf.d_sdm845_DB845c",
         "alsa-ucm-conf-link-conf.d_sdm845_LENOVO-81JL-LenovoYOGAC630_13Q50-LNVNB161216",
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5_Devkit",
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5",
         "alsa-ucm-conf-link-conf.d_simple-card_PinePhone",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-imx8qm",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-nau8822",
@@ -1146,20 +1070,8 @@ phony {
         "alsa-ucm-conf-link-conf.d_sof-mt8395-evk_sof-mt8395-evk",
         "alsa-ucm-conf-link-conf.d_sof-soundwire_sof-soundwire",
         "alsa-ucm-conf-link-conf.d_sun4i-codec_h616-audio-codec",
-        "alsa-ucm-conf-link-conf.d_tegra_ASUS_Google_Nexus_7_ALC5642",
-        "alsa-ucm-conf-link-conf.d_tegra_Acer_Iconia_Tab_A500_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Slider_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Transformer_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Infinity_TF700T_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300T_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TG_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TL_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Prime_TF201_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Compal_PAZ00",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBig",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBlaze",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_4X_HD_MAX98089",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_Vu_MAX98089",
         "alsa-ucm-conf-link-conf.d_tegra-hda_tegra-hda",
         "alsa-ucm-conf-link-conf.d_x1e80100_TUXEDO-TUXEDOElite14Gen1-2.0-TXEM14QX4NM",
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E001DE-DEVKIT",
@@ -1746,8 +1658,6 @@ phony {
 phony {
     name: "alsa-ucm-conf-dir-conf.d_simple-card",
     required: [
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5_Devkit",
-        "alsa-ucm-conf-link-conf.d_simple-card_Librem_5",
         "alsa-ucm-conf-link-conf.d_simple-card_PinePhone",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-imx8qm",
         "alsa-ucm-conf-link-conf.d_simple-card_apalis-nau8822",
@@ -1905,20 +1815,8 @@ phony {
 phony {
     name: "alsa-ucm-conf-dir-conf.d_tegra",
     required: [
-        "alsa-ucm-conf-link-conf.d_tegra_ASUS_Google_Nexus_7_ALC5642",
-        "alsa-ucm-conf-link-conf.d_tegra_Acer_Iconia_Tab_A500_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Slider_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_EeePad_Transformer_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Infinity_TF700T_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300T_WM8903",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TG_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Pad_TF300TL_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Asus_Transformer_Prime_TF201_RT5631",
-        "alsa-ucm-conf-link-conf.d_tegra_Compal_PAZ00",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBig",
         "alsa-ucm-conf-link-conf.d_tegra_GoogleNyanBlaze",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_4X_HD_MAX98089",
-        "alsa-ucm-conf-link-conf.d_tegra_LG_Optimus_Vu_MAX98089",
     ],
 }
 

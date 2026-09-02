@@ -10,6 +10,18 @@ package {
     ],
 }
 
+// NOT installable by the Android build (ucm2/NXP):
+//
+// Kati/Make treats whitespace as a list separator, so a path that
+// contains a space cannot be installed, whatever the module type.
+// alsa-lib probes for these by ${CardLongName}; a device that needs
+// one of them has to provide it by other means, e.g. a device
+// specific conf.d/<driver>/<driver>.conf that dispatches on the
+// card long name.
+//
+//   ucm2/NXP/iMX8/Librem_5/Librem 5.conf
+//   ucm2/NXP/iMX8/Librem_5_Devkit/Librem 5 Devkit.conf
+
 prebuilt_etc {
     name: "alsa-ucm-conf-files-NXP_iMX6_Toradex_apalis-imx6",
     vendor: true,
@@ -46,7 +58,6 @@ prebuilt_etc {
     relative_install_path: "alsa/ucm2/NXP/iMX8/Librem_5",
     srcs: [
         "iMX8/Librem_5/HiFi.conf",
-        "iMX8/Librem_5/Librem 5.conf",
     ],
 }
 
@@ -56,7 +67,6 @@ prebuilt_etc {
     relative_install_path: "alsa/ucm2/NXP/iMX8/Librem_5_Devkit",
     srcs: [
         "iMX8/Librem_5_Devkit/HiFi.conf",
-        "iMX8/Librem_5_Devkit/Librem 5 Devkit.conf",
     ],
 }
 
