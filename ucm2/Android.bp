@@ -1116,15 +1116,51 @@ phony {
 }
 
 // conf.d/sm8250/Qualcomm-RB5-WSA8815-Speakers-DMIC0.conf -> ../../Qualcomm/sm8250/Qualcomm-RB5-WSA8815-Speakers-DMIC0.conf
+// conf.d/sm8250/xiaomi-XiaomiMi9T-.conf -> Xiaomi Mi 9T.conf
+// conf.d/sm8250/xiaomi-XiaomiMi9TSamsung-.conf -> Xiaomi Mi 9T.conf
+// conf.d/sm8250/xiaomi-XiaomiMi9TSamsung.conf -> Xiaomi Mi 9T.conf
+// conf.d/sm8250/xiaomi-XiaomiMi9TVisionox-.conf -> Xiaomi Mi 9T.conf
+// conf.d/sm8250/xiaomi-XiaomiMi9TVisionox.conf -> Xiaomi Mi 9T.conf
+// conf.d/sm8250/xiaomi-XiaomiMiNote10-.conf -> Xiaomi Mi Note 10.conf
+// conf.d/sm8250/xiaomi-XiaomiMiNote10.conf -> Xiaomi Mi Note 10.conf
+// conf.d/sm8250/xiaomi-XiaomiMiNote10Lite-.conf -> Xiaomi Mi Note 10 Lite.conf
+// conf.d/sm8250/xiaomi-XiaomiMiNote10Lite.conf -> Xiaomi Mi Note 10 Lite.conf
+// conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCHuaxing-.conf -> POCO X3.conf
+// conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCHuaxing.conf -> POCO X3.conf
+// conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCTianma-.conf -> POCO X3.conf
+// conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCTianma.conf -> POCO X3.conf
+//
+// NOT installed, path contains whitespace (see ucm2/conf.d/Android.bp):
+//   conf.d/sm8250/POCO X3.conf
+//   conf.d/sm8250/Xiaomi Mi 9T.conf
+//   conf.d/sm8250/Xiaomi Mi Note 10 Lite.conf
+//   conf.d/sm8250/Xiaomi Mi Note 10.conf
 phony {
     name: "alsa-ucm-conf-card-sm8250",
     required: [
         "alsa-ucm-conf-base",
         "alsa-ucm-conf-files-Qualcomm_sm8250",
+        "alsa-ucm-conf-files-Xiaomi_davinci",
+        "alsa-ucm-conf-files-Xiaomi_surya",
+        "alsa-ucm-conf-files-Xiaomi_toco",
+        "alsa-ucm-conf-files-Xiaomi_tucana",
         "alsa-ucm-conf-files-codecs_qcom-lpass_va-macro",
         "alsa-ucm-conf-files-codecs_qcom-lpass_wsa-macro",
         "alsa-ucm-conf-files-codecs_wsa881x",
         "alsa-ucm-conf-link-conf.d_sm8250_Qualcomm-RB5-WSA8815-Speakers-DMIC0",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9T-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma-",
     ],
 }
 

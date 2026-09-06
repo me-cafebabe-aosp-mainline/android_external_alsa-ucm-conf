@@ -21,6 +21,10 @@ package {
 //
 //   ucm2/conf.d/simple-card/Librem 5 Devkit.conf
 //   ucm2/conf.d/simple-card/Librem 5.conf
+//   ucm2/conf.d/sm8250/POCO X3.conf
+//   ucm2/conf.d/sm8250/Xiaomi Mi 9T.conf
+//   ucm2/conf.d/sm8250/Xiaomi Mi Note 10 Lite.conf
+//   ucm2/conf.d/sm8250/Xiaomi Mi Note 10.conf
 //   ucm2/conf.d/tegra/ASUS Google Nexus 7 ALC5642.conf
 //   ucm2/conf.d/tegra/Acer Iconia Tab A500 WM8903.conf
 //   ucm2/conf.d/tegra/Asus EeePad Slider WM8903.conf
@@ -959,6 +963,97 @@ install_symlink {
 }
 
 install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9T-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMi9T-.conf",
+    symlink_target: "Xiaomi Mi 9T.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMi9TSamsung-.conf",
+    symlink_target: "Xiaomi Mi 9T.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMi9TSamsung.conf",
+    symlink_target: "Xiaomi Mi 9T.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMi9TVisionox-.conf",
+    symlink_target: "Xiaomi Mi 9T.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMi9TVisionox.conf",
+    symlink_target: "Xiaomi Mi 9T.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMiNote10-.conf",
+    symlink_target: "Xiaomi Mi Note 10.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMiNote10.conf",
+    symlink_target: "Xiaomi Mi Note 10.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMiNote10Lite-.conf",
+    symlink_target: "Xiaomi Mi Note 10 Lite.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiMiNote10Lite.conf",
+    symlink_target: "Xiaomi Mi Note 10 Lite.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCHuaxing-.conf",
+    symlink_target: "POCO X3.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCHuaxing.conf",
+    symlink_target: "POCO X3.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma-",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCTianma-.conf",
+    symlink_target: "POCO X3.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/sm8250/xiaomi-XiaomiPOCOX3NFCTianma.conf",
+    symlink_target: "POCO X3.conf",
+}
+
+install_symlink {
     name: "alsa-ucm-conf-link-conf.d_sm8550_SM8550-HDK",
     vendor: true,
     installed_location: "etc/alsa/ucm2/conf.d/sm8550/SM8550-HDK.conf",
@@ -1256,6 +1351,19 @@ phony {
         "alsa-ucm-conf-link-conf.d_simple-card_verdin-wm8904",
         "alsa-ucm-conf-link-conf.d_skylake-rt286_skylake-rt286",
         "alsa-ucm-conf-link-conf.d_sm8250_Qualcomm-RB5-WSA8815-Speakers-DMIC0",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9T-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma",
         "alsa-ucm-conf-link-conf.d_sm8550_SM8550-HDK",
         "alsa-ucm-conf-link-conf.d_sm8650_SM8650-MTP",
         "alsa-ucm-conf-link-conf.d_sm8650_SM8650-QRD",
@@ -1960,6 +2068,19 @@ phony {
     name: "alsa-ucm-conf-dir-conf.d_sm8250",
     required: [
         "alsa-ucm-conf-link-conf.d_sm8250_Qualcomm-RB5-WSA8815-Speakers-DMIC0",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9T-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TSamsung",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMi9TVisionox",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiMiNote10Lite",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCHuaxing",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma-",
+        "alsa-ucm-conf-link-conf.d_sm8250_xiaomi-XiaomiPOCOX3NFCTianma",
     ],
 }
 

@@ -20,6 +20,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-Xiaomi_davinci",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Xiaomi/davinci",
+    srcs: [
+        "davinci/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-Xiaomi_mido",
     vendor: true,
     relative_install_path: "alsa/ucm2/Xiaomi/mido",
@@ -43,6 +52,33 @@ prebuilt_etc {
     relative_install_path: "alsa/ucm2/Xiaomi/santoni",
     srcs: [
         "santoni/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-Xiaomi_surya",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Xiaomi/surya",
+    srcs: [
+        "surya/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-Xiaomi_toco",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Xiaomi/toco",
+    srcs: [
+        "toco/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-Xiaomi_tucana",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Xiaomi/tucana",
+    srcs: [
+        "tucana/HiFi.conf",
     ],
 }
 
@@ -78,9 +114,13 @@ phony {
     name: "alsa-ucm-conf-dir-Xiaomi",
     required: [
         "alsa-ucm-conf-files-Xiaomi_daisy",
+        "alsa-ucm-conf-files-Xiaomi_davinci",
         "alsa-ucm-conf-files-Xiaomi_mido",
         "alsa-ucm-conf-files-Xiaomi_riva",
         "alsa-ucm-conf-files-Xiaomi_santoni",
+        "alsa-ucm-conf-files-Xiaomi_surya",
+        "alsa-ucm-conf-files-Xiaomi_toco",
+        "alsa-ucm-conf-files-Xiaomi_tucana",
         "alsa-ucm-conf-files-Xiaomi_ugg",
         "alsa-ucm-conf-files-Xiaomi_uter",
         "alsa-ucm-conf-files-Xiaomi_vince",
@@ -92,6 +132,14 @@ phony {
     name: "alsa-ucm-conf-dir-Xiaomi_daisy",
     required: [
         "alsa-ucm-conf-files-Xiaomi_daisy",
+    ],
+}
+
+// Everything below ucm2/Xiaomi/davinci/.
+phony {
+    name: "alsa-ucm-conf-dir-Xiaomi_davinci",
+    required: [
+        "alsa-ucm-conf-files-Xiaomi_davinci",
     ],
 }
 
@@ -116,6 +164,30 @@ phony {
     name: "alsa-ucm-conf-dir-Xiaomi_santoni",
     required: [
         "alsa-ucm-conf-files-Xiaomi_santoni",
+    ],
+}
+
+// Everything below ucm2/Xiaomi/surya/.
+phony {
+    name: "alsa-ucm-conf-dir-Xiaomi_surya",
+    required: [
+        "alsa-ucm-conf-files-Xiaomi_surya",
+    ],
+}
+
+// Everything below ucm2/Xiaomi/toco/.
+phony {
+    name: "alsa-ucm-conf-dir-Xiaomi_toco",
+    required: [
+        "alsa-ucm-conf-files-Xiaomi_toco",
+    ],
+}
+
+// Everything below ucm2/Xiaomi/tucana/.
+phony {
+    name: "alsa-ucm-conf-dir-Xiaomi_tucana",
+    required: [
+        "alsa-ucm-conf-files-Xiaomi_tucana",
     ],
 }
 
