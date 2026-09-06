@@ -197,6 +197,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-uter",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-uter",
+    srcs: [
+        "xiaomi-uter/xiaomi-uter.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-conf.d_xiaomi-vince",
     vendor: true,
     relative_install_path: "alsa/ucm2/conf.d/xiaomi-vince",
@@ -1284,6 +1293,7 @@ phony {
         "alsa-ucm-conf-files-conf.d_xiaomi-santoni",
         "alsa-ucm-conf-files-conf.d_xiaomi-tissot",
         "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+        "alsa-ucm-conf-files-conf.d_xiaomi-uter",
         "alsa-ucm-conf-files-conf.d_xiaomi-vince",
         "alsa-ucm-conf-files-conf.d_xiaomi-ysl",
     ],
@@ -2197,6 +2207,14 @@ phony {
     name: "alsa-ucm-conf-dir-conf.d_xiaomi-ugg",
     required: [
         "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-uter/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-uter",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-uter",
     ],
 }
 

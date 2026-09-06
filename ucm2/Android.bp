@@ -1608,6 +1608,18 @@ phony {
     ],
 }
 
+// conf.d/xiaomi-uter/xiaomi-uter.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-uter",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_uter",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-uter",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
 // conf.d/xiaomi-vince/xiaomi-vince.conf
 phony {
     name: "alsa-ucm-conf-card-xiaomi-vince",

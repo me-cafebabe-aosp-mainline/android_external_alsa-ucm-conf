@@ -56,6 +56,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-Xiaomi_uter",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Xiaomi/uter",
+    srcs: [
+        "uter/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-Xiaomi_vince",
     vendor: true,
     relative_install_path: "alsa/ucm2/Xiaomi/vince",
@@ -73,6 +82,7 @@ phony {
         "alsa-ucm-conf-files-Xiaomi_riva",
         "alsa-ucm-conf-files-Xiaomi_santoni",
         "alsa-ucm-conf-files-Xiaomi_ugg",
+        "alsa-ucm-conf-files-Xiaomi_uter",
         "alsa-ucm-conf-files-Xiaomi_vince",
     ],
 }
@@ -114,6 +124,14 @@ phony {
     name: "alsa-ucm-conf-dir-Xiaomi_ugg",
     required: [
         "alsa-ucm-conf-files-Xiaomi_ugg",
+    ],
+}
+
+// Everything below ucm2/Xiaomi/uter/.
+phony {
+    name: "alsa-ucm-conf-dir-Xiaomi_uter",
+    required: [
+        "alsa-ucm-conf-files-Xiaomi_uter",
     ],
 }
 
