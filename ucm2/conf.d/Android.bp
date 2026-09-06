@@ -34,6 +34,186 @@ package {
 //   ucm2/conf.d/tegra/LG Optimus 4X HD MAX98089.conf
 //   ucm2/conf.d/tegra/LG Optimus Vu MAX98089.conf
 
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_asus-ze520kl",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/asus-ze520kl",
+    srcs: [
+        "asus-ze520kl/asus-ze520kl.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_cd-18781y",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/cd-18781y",
+    srcs: [
+        "cd-18781y/cd-18781y.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_huawei-milan",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/huawei-milan",
+    srcs: [
+        "huawei-milan/huawei-milan.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_moto-montana",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/moto-montana",
+    srcs: [
+        "moto-montana/moto-montana.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_motorola-hannah",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/motorola-hannah",
+    srcs: [
+        "motorola-hannah/motorola-hannah.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_motorola-potter",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/motorola-potter",
+    srcs: [
+        "motorola-potter/motorola-potter.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-daisy",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-daisy",
+    srcs: [
+        "xiaomi-daisy/xiaomi-daisy.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-land",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-land",
+    srcs: [
+        "xiaomi-land/xiaomi-land.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-markw",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-markw",
+    srcs: [
+        "xiaomi-markw/xiaomi-markw.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-mido",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-mido",
+    srcs: [
+        "xiaomi-mido/xiaomi-mido.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-onclite",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-onclite",
+    srcs: [
+        "xiaomi-onclite/xiaomi-onclite.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-prada",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-prada",
+    srcs: [
+        "xiaomi-prada/xiaomi-prada.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-riva",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-riva",
+    srcs: [
+        "xiaomi-riva/xiaomi-riva.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-rolex",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-rolex",
+    srcs: [
+        "xiaomi-rolex/xiaomi-rolex.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-rosy",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-rosy",
+    srcs: [
+        "xiaomi-rosy/xiaomi-rosy.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-santoni",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-santoni",
+    srcs: [
+        "xiaomi-santoni/xiaomi-santoni.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-tissot",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-tissot",
+    srcs: [
+        "xiaomi-tissot/xiaomi-tissot.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-ugg",
+    srcs: [
+        "xiaomi-ugg/xiaomi-ugg.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-vince",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-vince",
+    srcs: [
+        "xiaomi-vince/xiaomi-vince.conf",
+    ],
+}
+
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_xiaomi-ysl",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/xiaomi-ysl",
+    srcs: [
+        "xiaomi-ysl/xiaomi-ysl.conf",
+    ],
+}
+
 install_symlink {
     name: "alsa-ucm-conf-link-conf.d_DB410c_DB410c",
     vendor: true,
@@ -172,6 +352,13 @@ install_symlink {
     vendor: true,
     installed_location: "etc/alsa/ucm2/conf.d/apq8096/DB820c.conf",
     symlink_target: "../../Qualcomm/apq8096/apq8096.conf",
+}
+
+install_symlink {
+    name: "alsa-ucm-conf-link-conf.d_asus-ze552kl_asus-ze552kl",
+    vendor: true,
+    installed_location: "etc/alsa/ucm2/conf.d/asus-ze552kl/asus-ze552kl.conf",
+    symlink_target: "../asus-ze520kl/asus-ze520kl.conf",
 }
 
 install_symlink {
@@ -969,6 +1156,8 @@ phony {
         "alsa-ucm-conf-link-conf.d_acpd7219m98357_acpd7219m98357",
         "alsa-ucm-conf-link-conf.d_amd-soundwire_amd-soundwire",
         "alsa-ucm-conf-link-conf.d_apq8096_DB820c",
+        "alsa-ucm-conf-files-conf.d_asus-ze520kl",
+        "alsa-ucm-conf-link-conf.d_asus-ze552kl_asus-ze552kl",
         "alsa-ucm-conf-link-conf.d_avs_da7219_Google-Atlas-1.0",
         "alsa-ucm-conf-link-conf.d_avs_da7219_Google-Coral-rev2",
         "alsa-ucm-conf-link-conf.d_avs_dmic_Acer-Lars-1.0",
@@ -998,6 +1187,7 @@ phony {
         "alsa-ucm-conf-link-conf.d_bytcr-rt5640_bytcr-rt5640",
         "alsa-ucm-conf-link-conf.d_bytcr-rt5651_bytcr-rt5651",
         "alsa-ucm-conf-link-conf.d_bytcr-wm5102_bytcr-wm5102",
+        "alsa-ucm-conf-files-conf.d_cd-18781y",
         "alsa-ucm-conf-link-conf.d_cht-bsw-rt5672_cht-bsw-rt5672",
         "alsa-ucm-conf-link-conf.d_chtmax98090_chtmax98090",
         "alsa-ucm-conf-link-conf.d_chtnau8824_chtnau8824",
@@ -1011,8 +1201,12 @@ phony {
         "alsa-ucm-conf-link-conf.d_gx-sound-card_LIBRETECH-CC",
         "alsa-ucm-conf-link-conf.d_hda-dsp_hda-dsp",
         "alsa-ucm-conf-link-conf.d_hdaudioB0D2_hdaudioB0D2",
+        "alsa-ucm-conf-files-conf.d_huawei-milan",
         "alsa-ucm-conf-link-conf.d_kaanapali_Kaanapali-MTP",
         "alsa-ucm-conf-link-conf.d_kblrt5660_kblrt5660",
+        "alsa-ucm-conf-files-conf.d_moto-montana",
+        "alsa-ucm-conf-files-conf.d_motorola-hannah",
+        "alsa-ucm-conf-files-conf.d_motorola-potter",
         "alsa-ucm-conf-link-conf.d_mt8183_da7219_r_mt8183_da7219_r",
         "alsa-ucm-conf-link-conf.d_mt8183_mt6358_t_mt8183_mt6358_t",
         "alsa-ucm-conf-link-conf.d_mt8192_mt6359_mt8192_mt6359_rt1015p_rt5682",
@@ -1078,6 +1272,20 @@ phony {
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-CRD",
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-EVK",
         "alsa-ucm-conf-link-conf.d_x1e80100_x1e80100",
+        "alsa-ucm-conf-files-conf.d_xiaomi-daisy",
+        "alsa-ucm-conf-files-conf.d_xiaomi-land",
+        "alsa-ucm-conf-files-conf.d_xiaomi-markw",
+        "alsa-ucm-conf-files-conf.d_xiaomi-mido",
+        "alsa-ucm-conf-files-conf.d_xiaomi-onclite",
+        "alsa-ucm-conf-files-conf.d_xiaomi-prada",
+        "alsa-ucm-conf-files-conf.d_xiaomi-riva",
+        "alsa-ucm-conf-files-conf.d_xiaomi-rolex",
+        "alsa-ucm-conf-files-conf.d_xiaomi-rosy",
+        "alsa-ucm-conf-files-conf.d_xiaomi-santoni",
+        "alsa-ucm-conf-files-conf.d_xiaomi-tissot",
+        "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+        "alsa-ucm-conf-files-conf.d_xiaomi-vince",
+        "alsa-ucm-conf-files-conf.d_xiaomi-ysl",
     ],
 }
 
@@ -1234,6 +1442,22 @@ phony {
     ],
 }
 
+// Everything below ucm2/conf.d/asus-ze520kl/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_asus-ze520kl",
+    required: [
+        "alsa-ucm-conf-files-conf.d_asus-ze520kl",
+    ],
+}
+
+// Everything below ucm2/conf.d/asus-ze552kl/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_asus-ze552kl",
+    required: [
+        "alsa-ucm-conf-link-conf.d_asus-ze552kl_asus-ze552kl",
+    ],
+}
+
 // Everything below ucm2/conf.d/avs_da7219/.
 phony {
     name: "alsa-ucm-conf-dir-conf.d_avs_da7219",
@@ -1382,6 +1606,14 @@ phony {
     ],
 }
 
+// Everything below ucm2/conf.d/cd-18781y/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_cd-18781y",
+    required: [
+        "alsa-ucm-conf-files-conf.d_cd-18781y",
+    ],
+}
+
 // Everything below ucm2/conf.d/cht-bsw-rt5672/.
 phony {
     name: "alsa-ucm-conf-dir-conf.d_cht-bsw-rt5672",
@@ -1465,6 +1697,14 @@ phony {
     ],
 }
 
+// Everything below ucm2/conf.d/huawei-milan/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_huawei-milan",
+    required: [
+        "alsa-ucm-conf-files-conf.d_huawei-milan",
+    ],
+}
+
 // Everything below ucm2/conf.d/kaanapali/.
 phony {
     name: "alsa-ucm-conf-dir-conf.d_kaanapali",
@@ -1478,6 +1718,30 @@ phony {
     name: "alsa-ucm-conf-dir-conf.d_kblrt5660",
     required: [
         "alsa-ucm-conf-link-conf.d_kblrt5660_kblrt5660",
+    ],
+}
+
+// Everything below ucm2/conf.d/moto-montana/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_moto-montana",
+    required: [
+        "alsa-ucm-conf-files-conf.d_moto-montana",
+    ],
+}
+
+// Everything below ucm2/conf.d/motorola-hannah/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_motorola-hannah",
+    required: [
+        "alsa-ucm-conf-files-conf.d_motorola-hannah",
+    ],
+}
+
+// Everything below ucm2/conf.d/motorola-potter/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_motorola-potter",
+    required: [
+        "alsa-ucm-conf-files-conf.d_motorola-potter",
     ],
 }
 
@@ -1837,5 +2101,117 @@ phony {
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-CRD",
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-EVK",
         "alsa-ucm-conf-link-conf.d_x1e80100_x1e80100",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-daisy/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-daisy",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-daisy",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-land/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-land",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-land",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-markw/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-markw",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-markw",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-mido/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-mido",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-mido",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-onclite/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-onclite",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-onclite",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-prada/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-prada",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-prada",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-riva/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-riva",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-riva",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-rolex/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-rolex",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-rolex",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-rosy/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-rosy",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-rosy",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-santoni/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-santoni",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-santoni",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-tissot/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-tissot",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-tissot",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-ugg/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-ugg",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-vince/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-vince",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-vince",
+    ],
+}
+
+// Everything below ucm2/conf.d/xiaomi-ysl/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_xiaomi-ysl",
+    required: [
+        "alsa-ucm-conf-files-conf.d_xiaomi-ysl",
     ],
 }

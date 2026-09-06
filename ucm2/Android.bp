@@ -306,6 +306,7 @@ phony {
         "alsa-ucm-conf-files-codecs_es8316",
         "alsa-ucm-conf-files-codecs_hda",
         "alsa-ucm-conf-files-codecs_max98090",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
         "alsa-ucm-conf-files-codecs_nau8824",
         "alsa-ucm-conf-files-codecs_pm4125",
         "alsa-ucm-conf-files-codecs_qcom-lpass_rx-macro",
@@ -357,6 +358,31 @@ phony {
         "alsa-ucm-conf-base",
         "alsa-ucm-conf-files-Qualcomm_apq8096",
         "alsa-ucm-conf-link-conf.d_apq8096_DB820c",
+    ],
+}
+
+// conf.d/asus-ze520kl/asus-ze520kl.conf
+phony {
+    name: "alsa-ucm-conf-card-asus-ze520kl",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_daisy",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_asus-ze520kl",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/asus-ze552kl/asus-ze552kl.conf -> ../asus-ze520kl/asus-ze520kl.conf
+phony {
+    name: "alsa-ucm-conf-card-asus-ze552kl",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_daisy",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_asus-ze520kl",
+        "alsa-ucm-conf-files-lib",
+        "alsa-ucm-conf-link-conf.d_asus-ze552kl_asus-ze552kl",
     ],
 }
 
@@ -568,6 +594,17 @@ phony {
     ],
 }
 
+// conf.d/cd-18781y/cd-18781y.conf
+phony {
+    name: "alsa-ucm-conf-card-cd-18781y",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Lenovo_cd-18781y",
+        "alsa-ucm-conf-files-conf.d_cd-18781y",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
 // conf.d/cht-bsw-rt5672/cht-bsw-rt5672.conf -> ../../Intel/cht-bsw-rt5672/cht-bsw-rt5672.conf
 phony {
     name: "alsa-ucm-conf-card-cht-bsw-rt5672",
@@ -693,6 +730,18 @@ phony {
     ],
 }
 
+// conf.d/huawei-milan/huawei-milan.conf
+phony {
+    name: "alsa-ucm-conf-card-huawei-milan",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_vince",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_huawei-milan",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
 // conf.d/kaanapali/Kaanapali-MTP.conf -> ../../Qualcomm/kaanapali/MTP/Kaanapali-MTP.conf
 phony {
     name: "alsa-ucm-conf-card-kaanapali",
@@ -718,6 +767,42 @@ phony {
         "alsa-ucm-conf-files-Intel_kblrt5660",
         "alsa-ucm-conf-files-lib",
         "alsa-ucm-conf-link-conf.d_kblrt5660_kblrt5660",
+    ],
+}
+
+// conf.d/moto-montana/moto-montana.conf
+phony {
+    name: "alsa-ucm-conf-card-moto-montana",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_vince",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_moto-montana",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/motorola-hannah/motorola-hannah.conf
+phony {
+    name: "alsa-ucm-conf-card-motorola-hannah",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Motorola_potter",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_motorola-hannah",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/motorola-potter/motorola-potter.conf
+phony {
+    name: "alsa-ucm-conf-card-motorola-potter",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Motorola_potter",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_motorola-potter",
+        "alsa-ucm-conf-files-lib",
     ],
 }
 
@@ -1260,6 +1345,7 @@ phony {
         "alsa-ucm-conf-files-codecs_es8316",
         "alsa-ucm-conf-files-codecs_hda",
         "alsa-ucm-conf-files-codecs_max98090",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
         "alsa-ucm-conf-files-codecs_nau8824",
         "alsa-ucm-conf-files-codecs_pm4125",
         "alsa-ucm-conf-files-codecs_qcom-lpass_rx-macro",
@@ -1375,5 +1461,173 @@ phony {
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-CRD",
         "alsa-ucm-conf-link-conf.d_x1e80100_X1E80100-EVK",
         "alsa-ucm-conf-link-conf.d_x1e80100_x1e80100",
+    ],
+}
+
+// conf.d/xiaomi-daisy/xiaomi-daisy.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-daisy",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_daisy",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-daisy",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-land/xiaomi-land.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-land",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_riva",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-land",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-markw/xiaomi-markw.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-markw",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_mido",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-markw",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-mido/xiaomi-mido.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-mido",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_mido",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-mido",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-onclite/xiaomi-onclite.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-onclite",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_vince",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-onclite",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-prada/xiaomi-prada.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-prada",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_riva",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-prada",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-riva/xiaomi-riva.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-riva",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_riva",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-riva",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-rolex/xiaomi-rolex.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-rolex",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_riva",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-rolex",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-rosy/xiaomi-rosy.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-rosy",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_vince",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-rosy",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-santoni/xiaomi-santoni.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-santoni",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_santoni",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-santoni",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-tissot/xiaomi-tissot.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-tissot",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_daisy",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-tissot",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-ugg/xiaomi-ugg.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-ugg",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_ugg",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-ugg",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-vince/xiaomi-vince.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-vince",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_vince",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-vince",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
+// conf.d/xiaomi-ysl/xiaomi-ysl.conf
+phony {
+    name: "alsa-ucm-conf-card-xiaomi-ysl",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Xiaomi_mido",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_xiaomi-ysl",
+        "alsa-ucm-conf-files-lib",
     ],
 }

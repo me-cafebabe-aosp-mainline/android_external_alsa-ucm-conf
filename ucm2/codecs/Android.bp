@@ -184,6 +184,30 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-codecs_msm8953-wcd",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/codecs/msm8953-wcd",
+    srcs: [
+        "msm8953-wcd/EarpieceDisableSeq.conf",
+        "msm8953-wcd/EarpieceEnableSeq.conf",
+        "msm8953-wcd/HeadphonesDisableSeq.conf",
+        "msm8953-wcd/HeadphonesEnableSeq.conf",
+        "msm8953-wcd/HeadsetMicDisableSeq.conf",
+        "msm8953-wcd/HeadsetMicEnableSeq.conf",
+        "msm8953-wcd/PrimaryMicDisableSeq.conf",
+        "msm8953-wcd/PrimaryMicEnableSeq.conf",
+        "msm8953-wcd/SecondaryMicDisableSeq.conf",
+        "msm8953-wcd/SecondaryMicEnableSeq.conf",
+        "msm8953-wcd/SpeakerDisableSeq.conf",
+        "msm8953-wcd/SpeakerEnableSeq.conf",
+        "msm8953-wcd/SpeakerHPHLDisableSeq.conf",
+        "msm8953-wcd/SpeakerHPHLEnableSeq.conf",
+        "msm8953-wcd/SpeakerHPHRDisableSeq.conf",
+        "msm8953-wcd/SpeakerHPHREnableSeq.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-codecs_nau8824",
     vendor: true,
     relative_install_path: "alsa/ucm2/codecs/nau8824",
@@ -622,6 +646,7 @@ phony {
         "alsa-ucm-conf-files-codecs_es8316",
         "alsa-ucm-conf-files-codecs_hda",
         "alsa-ucm-conf-files-codecs_max98090",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
         "alsa-ucm-conf-files-codecs_nau8824",
         "alsa-ucm-conf-files-codecs_pm4125",
         "alsa-ucm-conf-files-codecs_qcom-lpass_rx-macro",
@@ -791,6 +816,14 @@ phony {
     name: "alsa-ucm-conf-dir-codecs_max98090",
     required: [
         "alsa-ucm-conf-files-codecs_max98090",
+    ],
+}
+
+// Everything below ucm2/codecs/msm8953-wcd/.
+phony {
+    name: "alsa-ucm-conf-dir-codecs_msm8953-wcd",
+    required: [
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
     ],
 }
 
