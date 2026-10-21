@@ -56,6 +56,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-Qualcomm_msm8937-qrd",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Qualcomm/msm8937-qrd",
+    srcs: [
+        "msm8937-qrd/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-Qualcomm_qcm6490_QCM6490-IDP",
     vendor: true,
     relative_install_path: "alsa/ucm2/Qualcomm/qcm6490/QCM6490-IDP",
@@ -265,6 +274,7 @@ phony {
         "alsa-ucm-conf-files-Qualcomm_apq8096",
         "alsa-ucm-conf-files-Qualcomm_glymur",
         "alsa-ucm-conf-files-Qualcomm_kaanapali_MTP",
+        "alsa-ucm-conf-files-Qualcomm_msm8937-qrd",
         "alsa-ucm-conf-files-Qualcomm_qcm6490_QCM6490-IDP",
         "alsa-ucm-conf-files-Qualcomm_qcs615",
         "alsa-ucm-conf-files-Qualcomm_qcs6490_QCS6490-RB3Gen2",
@@ -323,6 +333,14 @@ phony {
     name: "alsa-ucm-conf-dir-Qualcomm_kaanapali_MTP",
     required: [
         "alsa-ucm-conf-files-Qualcomm_kaanapali_MTP",
+    ],
+}
+
+// Everything below ucm2/Qualcomm/msm8937-qrd/.
+phony {
+    name: "alsa-ucm-conf-dir-Qualcomm_msm8937-qrd",
+    required: [
+        "alsa-ucm-conf-files-Qualcomm_msm8937-qrd",
     ],
 }
 

@@ -806,6 +806,18 @@ phony {
     ],
 }
 
+// conf.d/msm8937-qrd/msm8937-qrd.conf
+phony {
+    name: "alsa-ucm-conf-card-msm8937-qrd",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Qualcomm_msm8937-qrd",
+        "alsa-ucm-conf-files-codecs_msm8953-wcd",
+        "alsa-ucm-conf-files-conf.d_msm8937-qrd",
+        "alsa-ucm-conf-files-lib",
+    ],
+}
+
 // conf.d/mt8183_da7219_r/mt8183_da7219_r.conf -> ../../MediaTek/mt8183/mt8183_da7219_rt1015p/mt8183_da7219_rt1015p.conf
 phony {
     name: "alsa-ucm-conf-card-mt8183_da7219_r",
