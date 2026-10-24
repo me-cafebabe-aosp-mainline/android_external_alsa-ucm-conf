@@ -1041,6 +1041,18 @@ phony {
     ],
 }
 
+// conf.d/samsung-j3xpro/samsung-j3xpro.conf
+phony {
+    name: "alsa-ucm-conf-card-samsung-j3xpro",
+    required: [
+        "alsa-ucm-conf-base",
+        "alsa-ucm-conf-files-Samsung_j3xpro",
+        "alsa-ucm-conf-files-codecs_msm8916-wcd",
+        "alsa-ucm-conf-files-conf.d_samsung-j3xpro",
+        "alsa-ucm-conf-files-platforms_msm8916",
+    ],
+}
+
 // conf.d/sc8280xp/sc8280xp.conf -> ../../Qualcomm/sc8280xp/sc8280xp.conf
 phony {
     name: "alsa-ucm-conf-card-sc8280xp",
