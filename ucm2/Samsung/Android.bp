@@ -29,6 +29,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-Samsung_j7chn",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Samsung/j7chn",
+    srcs: [
+        "j7chn/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-Samsung_snow",
     vendor: true,
     relative_install_path: "alsa/ucm2/Samsung/snow",
@@ -44,6 +53,7 @@ phony {
     required: [
         "alsa-ucm-conf-files-Samsung_j3xpro",
         "alsa-ucm-conf-files-Samsung_j5chn",
+        "alsa-ucm-conf-files-Samsung_j7chn",
         "alsa-ucm-conf-files-Samsung_snow",
     ],
 }
@@ -61,6 +71,14 @@ phony {
     name: "alsa-ucm-conf-dir-Samsung_j5chn",
     required: [
         "alsa-ucm-conf-files-Samsung_j5chn",
+    ],
+}
+
+// Everything below ucm2/Samsung/j7chn/.
+phony {
+    name: "alsa-ucm-conf-dir-Samsung_j7chn",
+    required: [
+        "alsa-ucm-conf-files-Samsung_j7chn",
     ],
 }
 
