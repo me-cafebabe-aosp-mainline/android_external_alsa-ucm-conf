@@ -111,6 +111,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_samsung-j5chn",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/samsung-j5chn",
+    srcs: [
+        "samsung-j5chn/samsung-j5chn.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-conf.d_xiaomi-daisy",
     vendor: true,
     relative_install_path: "alsa/ucm2/conf.d/xiaomi-daisy",
@@ -1354,6 +1363,7 @@ phony {
         "alsa-ucm-conf-link-conf.d_rockchip_es8316_rockchip_es8316",
         "alsa-ucm-conf-link-conf.d_sa8775p_LEMANS-EVK",
         "alsa-ucm-conf-files-conf.d_samsung-j3xpro",
+        "alsa-ucm-conf-files-conf.d_samsung-j5chn",
         "alsa-ucm-conf-link-conf.d_sc8280xp_sc8280xp",
         "alsa-ucm-conf-link-conf.d_sdm845_DB845c",
         "alsa-ucm-conf-link-conf.d_sdm845_LENOVO-81JL-LenovoYOGAC630_13Q50-LNVNB161216",
@@ -2052,6 +2062,14 @@ phony {
     name: "alsa-ucm-conf-dir-conf.d_samsung-j3xpro",
     required: [
         "alsa-ucm-conf-files-conf.d_samsung-j3xpro",
+    ],
+}
+
+// Everything below ucm2/conf.d/samsung-j5chn/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_samsung-j5chn",
+    required: [
+        "alsa-ucm-conf-files-conf.d_samsung-j5chn",
     ],
 }
 
