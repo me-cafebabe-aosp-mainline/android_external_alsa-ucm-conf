@@ -20,11 +20,22 @@ prebuilt_etc {
     ],
 }
 
+prebuilt_etc {
+    name: "alsa-ucm-conf-files-platforms_msm8916",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/platforms/msm8916",
+    srcs: [
+        "msm8916/qdsp6-components.conf",
+        "msm8916/qdsp6.conf",
+    ],
+}
+
 // Everything below ucm2/platforms/.
 phony {
     name: "alsa-ucm-conf-dir-platforms",
     required: [
         "alsa-ucm-conf-files-platforms_bytcr",
+        "alsa-ucm-conf-files-platforms_msm8916",
     ],
 }
 
@@ -33,5 +44,13 @@ phony {
     name: "alsa-ucm-conf-dir-platforms_bytcr",
     required: [
         "alsa-ucm-conf-files-platforms_bytcr",
+    ],
+}
+
+// Everything below ucm2/platforms/msm8916/.
+phony {
+    name: "alsa-ucm-conf-dir-platforms_msm8916",
+    required: [
+        "alsa-ucm-conf-files-platforms_msm8916",
     ],
 }
