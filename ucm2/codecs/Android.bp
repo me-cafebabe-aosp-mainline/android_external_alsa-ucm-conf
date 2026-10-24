@@ -184,6 +184,24 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-codecs_msm8916-wcd",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/codecs/msm8916-wcd",
+    srcs: [
+        "msm8916-wcd/DigitalMic.conf",
+        "msm8916-wcd/Earpiece.conf",
+        "msm8916-wcd/Headphones.conf",
+        "msm8916-wcd/HeadsetMic.conf",
+        "msm8916-wcd/PrimaryMic.conf",
+        "msm8916-wcd/SecondaryMic.conf",
+        "msm8916-wcd/Speaker.conf",
+        "msm8916-wcd/SpeakerHPHL.conf",
+        "msm8916-wcd/SpeakerHPHLR.conf",
+        "msm8916-wcd/SpeakerHPHR.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-codecs_msm8953-wcd",
     vendor: true,
     relative_install_path: "alsa/ucm2/codecs/msm8953-wcd",
@@ -646,6 +664,7 @@ phony {
         "alsa-ucm-conf-files-codecs_es8316",
         "alsa-ucm-conf-files-codecs_hda",
         "alsa-ucm-conf-files-codecs_max98090",
+        "alsa-ucm-conf-files-codecs_msm8916-wcd",
         "alsa-ucm-conf-files-codecs_msm8953-wcd",
         "alsa-ucm-conf-files-codecs_nau8824",
         "alsa-ucm-conf-files-codecs_pm4125",
@@ -816,6 +835,14 @@ phony {
     name: "alsa-ucm-conf-dir-codecs_max98090",
     required: [
         "alsa-ucm-conf-files-codecs_max98090",
+    ],
+}
+
+// Everything below ucm2/codecs/msm8916-wcd/.
+phony {
+    name: "alsa-ucm-conf-dir-codecs_msm8916-wcd",
+    required: [
+        "alsa-ucm-conf-files-codecs_msm8916-wcd",
     ],
 }
 
