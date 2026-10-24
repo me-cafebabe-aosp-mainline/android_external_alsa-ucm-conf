@@ -45,7 +45,8 @@ card.
 Dependency computation
 ----------------------
 
-For every conf.d entry the script follows `Include.<id>.File "..."`:
+For every conf.d entry the script follows `Include.<id>.File "..."` and the
+inline `<path/to/file.conf>` includes (looked up in the ucm2 root first):
 
   * "/foo/bar.conf"  is resolved against the ucm2 root
   * "foo/bar.conf"   is resolved against the *master file's* directory.  Note
@@ -126,6 +127,8 @@ RE_SAFE_COMPONENT = re.compile(r'^[A-Za-z0-9._+,@-]+$')
 
 # `Include.<id>.File "..."` and any other bare `File "..."`
 RE_FILE = re.compile(r'\bFile\s+"([^"]+)"')
+# inline `<path/to/file.conf>` include, one per line
+RE_INLINE = re.compile(r'^\s*<([^<>\s]+)>\s*(?:#.*)?$', re.M)
 # binary blobs, referenced as "${ConfTopDir}/blobs/..." by cset-bin
 RE_BLOB = re.compile(r'"[^"]*\bblobs/([^"]*)"')
 
@@ -325,6 +328,8 @@ class Resolver(object):
         text = self.tree.read(rel)
         for raw in RE_FILE.findall(text):
             self._handle_include(raw, base_dir, mods, seen)
+        for raw in RE_INLINE.findall(text):
+            self._handle_inline(raw, base_dir, mods, seen)
         for raw in RE_BLOB.findall(text):
             self._handle_blob(raw, mods)
 
@@ -344,6 +349,13 @@ class Resolver(object):
         target = self._resolve(raw, base_dir)
         if target is not None and self.tree.exists(target):
             self._walk(target, base_dir, mods, seen)
+
+    def _handle_inline(self, raw, base_dir, mods, seen):
+        # `<codecs/foo/Bar.conf>` is looked up in the ucm2 root first.
+        if "${" not in raw and not raw.startswith("/") and \
+                self.tree.exists(os.path.normpath(raw)):
+            raw = "/" + raw
+        self._handle_include(raw, base_dir, mods, seen)
 
     def _handle_blob(self, raw, mods):
         static = raw.split("${")[0]
