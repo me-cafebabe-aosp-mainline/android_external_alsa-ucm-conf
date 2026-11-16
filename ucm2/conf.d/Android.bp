@@ -102,6 +102,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-conf.d_samsung-a2015",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/conf.d/samsung-a2015",
+    srcs: [
+        "samsung-a2015/samsung-a2015.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-conf.d_samsung-j3xpro",
     vendor: true,
     relative_install_path: "alsa/ucm2/conf.d/samsung-j3xpro",
@@ -1371,6 +1380,7 @@ phony {
         "alsa-ucm-conf-link-conf.d_rk3588-es8316_rk3588-es8316",
         "alsa-ucm-conf-link-conf.d_rockchip_es8316_rockchip_es8316",
         "alsa-ucm-conf-link-conf.d_sa8775p_LEMANS-EVK",
+        "alsa-ucm-conf-files-conf.d_samsung-a2015",
         "alsa-ucm-conf-files-conf.d_samsung-j3xpro",
         "alsa-ucm-conf-files-conf.d_samsung-j5chn",
         "alsa-ucm-conf-files-conf.d_samsung-j7chn",
@@ -2064,6 +2074,14 @@ phony {
     name: "alsa-ucm-conf-dir-conf.d_sa8775p",
     required: [
         "alsa-ucm-conf-link-conf.d_sa8775p_LEMANS-EVK",
+    ],
+}
+
+// Everything below ucm2/conf.d/samsung-a2015/.
+phony {
+    name: "alsa-ucm-conf-dir-conf.d_samsung-a2015",
+    required: [
+        "alsa-ucm-conf-files-conf.d_samsung-a2015",
     ],
 }
 
