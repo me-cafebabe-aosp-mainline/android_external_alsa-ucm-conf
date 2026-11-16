@@ -11,6 +11,15 @@ package {
 }
 
 prebuilt_etc {
+    name: "alsa-ucm-conf-files-Samsung_a2015",
+    vendor: true,
+    relative_install_path: "alsa/ucm2/Samsung/a2015",
+    srcs: [
+        "a2015/HiFi.conf",
+    ],
+}
+
+prebuilt_etc {
     name: "alsa-ucm-conf-files-Samsung_j3xpro",
     vendor: true,
     relative_install_path: "alsa/ucm2/Samsung/j3xpro",
@@ -51,10 +60,19 @@ prebuilt_etc {
 phony {
     name: "alsa-ucm-conf-dir-Samsung",
     required: [
+        "alsa-ucm-conf-files-Samsung_a2015",
         "alsa-ucm-conf-files-Samsung_j3xpro",
         "alsa-ucm-conf-files-Samsung_j5chn",
         "alsa-ucm-conf-files-Samsung_j7chn",
         "alsa-ucm-conf-files-Samsung_snow",
+    ],
+}
+
+// Everything below ucm2/Samsung/a2015/.
+phony {
+    name: "alsa-ucm-conf-dir-Samsung_a2015",
+    required: [
+        "alsa-ucm-conf-files-Samsung_a2015",
     ],
 }
 
